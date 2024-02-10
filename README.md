@@ -1,0 +1,1 @@
+This app is a clone of the [All-In-One calculator](https://allinonecalculator.com/) Android app, which, as the name suggests, is a multifunctional calculator. Its features include unit and currency conversions, solving linear equiations, general caluclations, and more.

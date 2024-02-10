@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_prim">#FF000000</color>
+    <color name="text_sec">#FFFFFFFF</color>
+    <color name="text_tri">#FFB5C2C9</color>
+    <color name="text_quat">#FF616161</color>
+    <color name="bg_prim">#FFF5F5F5</color>
+    <color name="bg_sec">#FFEEEEEE</color>
+    <color name="elem_prim">#FFFFFFFF</color>
+    <color name="elem_sec">#FF616161</color>
+    <color name="main">#FF455A64</color>
+    <color name="main_dark">#FF546E7A</color>
+    <color name="main_light">#FF607D8B</color>
+
+    <color name="alg_prim">#FFC83F44</color>
+    <color name="geom_prim">#FFE4B90D</color>
+    <color name="unit_prim">#FF157EBD</color>
+    <color name="fin_prim">#FF77A644</color>
+    <color name="health_prim">#FF399DA8</color>
+    <color name="misc_prim">#FF6E6D6D</color>
+
+    <color name="alg_sec">#FFA31623</color>
+    <color name="geom_sec">#FFAF8800</color>
+    <color name="unit_sec">#FF0066A8</color>
+    <color name="fin_sec">#FF58802D</color>
+
+</resources>

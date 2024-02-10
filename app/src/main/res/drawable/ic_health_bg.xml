@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="36dp"
+    android:width="36dp"
+    android:viewportWidth="136"
+    android:viewportHeight="136">
+    <group
+        android:name="saved"
+        android:pivotX="10.0"
+        android:pivotY="10.0"
+        android:rotation="0" >
+        <path
+            android:name="vect_bg_left"
+            android:fillColor="@color/health_prim"
+            android:pathData="M  68.000, 132.000;
+                              L  20.000, 132.000; L  17.222, 131.757; L  14.528, 131.035; L  12.000, 129.856; L   9.715, 128.257;
+                              L   7.743, 126.285; L   6.144, 124.000; L   4.965, 121.472; L   4.243, 118.778; L   4.000, 116.000;
+                              L   4.000,  20.000; L   4.243,  17.222; L   4.965,  14.528; L   6.144,  12.000; L   7.743,   9.715;
+                              L   9.715,   7.743; L  12.000,   6.144; L  14.528,   4.965; L  17.222,   4.243; L  20.000,   4.000;
+                              L  68.000,   4.000z"
+            android:fillAlpha="1" />
+        <path
+            android:name="vect_bg_right"
+            android:fillColor="@color/health_prim"
+            android:pathData="M  68.000,   4.000;
+                              L 116.000,   4.000; L 118.778,   4.243; L 121.472,   4.965; L 124.000,   6.144; L 126.285,   7.743;
+                              L 128.257,   9.715; L 129.856,  12.000; L 131.035,  14.528; L 131.757,  17.222; L 132.000,  20.000;
+                              L 132.000, 116.000; L 131.757, 118.778; L 131.035, 121.472; L 129.856, 124.000; L 128.257, 126.285;
+                              L 126.285, 128.257; L 124.000, 129.856; L 121.472, 131.035; L 118.778, 131.757; L 116.000, 132.000;
+                              L  68.000, 132.000"
+            android:fillAlpha="1" />
+    </group>
+</vector>

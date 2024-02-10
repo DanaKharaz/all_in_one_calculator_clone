@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityMain"
+    android:background="@color/bg_prim">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/left_guide"
+            app:layout_constraintGuide_percent=".03"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_guide"
+            app:layout_constraintGuide_percent=".97"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upper_guide"
+            app:layout_constraintGuide_percent=".015"
+            android:orientation="horizontal"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrLaySearch"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:background="@color/elem_prim"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toTopOf="@+id/upper_guide">
+
+            <TextView
+                android:id="@+id/button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/geom_prim"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/button2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/geom_prim"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/button3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="2dp"
+                android:background="@color/geom_prim"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTxtSearch"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:ems="10"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:textColorHint="@color/text_quat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintStart_toEndOf="@+id/button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lblFavorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="24dp"
+            android:letterSpacing="0.25"
+            android:text="@string/fav"
+            android:textAllCaps="true"
+            android:textColor="@color/elem_sec"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/constrLaySearch" />
+
+        <LinearLayout
+            android:id="@+id/linLayFavorites"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/lblFavorites">
+
+            <LinearLayout
+                android:id="@+id/linLayFavoritesRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constrLayoutElem1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="0.5"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/btnImgElem1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/elem_sec"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lblElem1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Label"
+                        android:textColor="@color/text_prim"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnImgElem1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constrLayoutElem2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="0.5"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/btnImgElem2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/elem_sec"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lblElem2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Label"
+                        android:textColor="@color/text_prim"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnImgElem2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constrLayElem3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="0.5"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/btnImgElem3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/elem_sec"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lblElem3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Label"
+                        android:textColor="@color/text_prim"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnImgElem3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constrLayElem4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="0.5"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/btnImgElem4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/elem_sec"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lblElem4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Label"
+                        android:textColor="@color/text_prim"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnImgElem4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lblAlgebra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.25"
+            android:text="@string/alg"
+            android:textAllCaps="true"
+            android:textColor="@color/elem_sec"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/linLayFavorites" />
+
+        <LinearLayout
+            android:id="@+id/linLayAlgebra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblAlgebra"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"/>
+
+        <TextView
+            android:id="@+id/lblGeometry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.25"
+            android:text="@string/geom"
+            android:textAllCaps="true"
+            android:textColor="@color/elem_sec"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/linLayAlgebra" />
+
+        <LinearLayout
+            android:id="@+id/linLayGeometry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblGeometry"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"/>
+
+        <TextView
+            android:id="@+id/lblUnits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.25"
+            android:text="@string/unit"
+            android:textAllCaps="true"
+            android:textColor="@color/elem_sec"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/linLayGeometry" />
+
+        <LinearLayout
+            android:id="@+id/linLayUnits"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblUnits"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"/>
+
+        <TextView
+            android:id="@+id/lblFinance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.25"
+            android:text="@string/fin"
+            android:textAllCaps="true"
+            android:textColor="@color/elem_sec"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/linLayUnits" />
+
+        <LinearLayout
+            android:id="@+id/linLayFinance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblFinance"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"/>
+
+        <TextView
+            android:id="@+id/lblHealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.25"
+            android:text="@string/health"
+            android:textAllCaps="true"
+            android:textColor="@color/elem_sec"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/linLayFinance" />
+
+        <LinearLayout
+            android:id="@+id/linLayHealth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblHealth"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"/>
+
+        <TextView
+            android:id="@+id/lblMisc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.25"
+            android:text="@string/misc"
+            android:textAllCaps="true"
+            android:textColor="@color/elem_sec"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/linLayHealth" />
+
+        <LinearLayout
+            android:id="@+id/linLayMisc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblMisc"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

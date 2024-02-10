@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">All-In-One Calculator</string>
+    <string name="search">Search</string>
+    <string name="fav">favorites</string>
+    <string name="alg">algebra</string>
+    <string name="geom">geometry</string>
+    <string name="unit">unit converters</string>
+    <string name="fin">finance</string>
+    <string name="health">health</string>
+    <string name="misc">miscellaneous</string>
+</resources>
